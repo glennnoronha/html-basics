@@ -1,0 +1,282 @@
+body {
+  background-color: lightslategray;
+}
+
+h1 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+form {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+h5 {
+  font-family: monospace;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: italic;
+}
+
+#p1 {
+  color: lightgreen;
+}
+
+#p2 {
+  color: lightseagreen;
+}
+
+#p3 {
+  color: lightskyblue;
+}
+
+#p4 {
+  color: lightpink;
+}
+
+.border {
+  border-width: 3px;
+  border-style: dashed;
+  border-color: rgb(2, 137, 255);
+  border-radius: 5px;
+}
+
+.border2 {
+  border-top: 3px solid red;
+  border-bottom: 3px dashed blue;
+  border-left: 3px double rgb(0, 255, 0);
+  border-right: 3px groove rgb(255, 132, 0);
+  border-radius: 10px;
+}
+
+.shadow {
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  text-shadow: 5px 5px 5px rgb(255, 0, 0), -5px -5px 5px rgb(0, 0, 255);
+}
+
+#box1 {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(245, 173, 245);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+}
+
+.box {
+  border: 5px solid;
+  font-size: 3em;
+  width: 200px;
+  height: 200px;
+  margin: auto; /* centering */
+  display: flex; /* flexbox needed for text centering */
+  justify-content: center; /* horizontal alignment */
+  align-items: center; /* vertical alignment */
+}
+
+#box2 {
+  background-color: rgb(241, 54, 54);
+  margin-bottom: 10px;
+}
+#box3 {
+  background-color: rgb(33, 96, 254);
+}
+
+.float-container {
+  border: 5px solid;
+  display: flow-root; /*keeps content in container*/
+}
+#img1 {
+  float: left;
+  margin-right: 10px;
+}
+
+#img2 {
+  float: right;
+  margin-bottom: 10px;
+}
+
+#overflow {
+  border: 2px solid;
+  height: 50px;
+  overflow: visible; /*shows if there is overflow*/
+  overflow: hidden; /*hides if there is overflow*/
+  overflow: auto; /*scrolls if there is overflow*/
+}
+
+#div1 {
+  background-color: #fe4040;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  /*display: none; /*hides element*/
+  /*visibility: hidden; /*hidden but still takes up space*/
+}
+
+#span1 {
+  background-color: #0084ff;
+  /*can use width & height if display is block*/
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+}
+
+.container{
+    background-color: rgb(70, 83, 96);
+    height: 50vh; /*50% of viewport height*/
+}
+.height-width {
+    background-color: white;
+    border: 2px solid;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    text-align: center;
+    min-height: 50%;
+}
+
+#position{
+    /*
+    relative = relative to where it is in the document
+    fixed = relative to the viewport
+    absolute = relative to the nearest ancestor
+    sticky = based on scroll position
+    static = default postion for an element*/
+    width: 200px;
+    height: 200px;
+    background-color: rgb(0, 110, 255);
+    position: relative;
+    left: 50vw; /* left edge at 50% of viewport width*/
+    transform: translateX(-50%); /*50% of width()*/;
+}
+
+#position2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 75, 58);
+    position: absolute;
+    top: 50px;
+    left: 50px
+}
+
+#background{
+    background-image: url(images/wallpaper.webp);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    /*background-attachment: fixed;*/
+}
+
+#combinator{
+    border: 2px solid;
+}
+/*
+#combinator p{
+    background-color: rgb(255, 0, 0);
+} descendant selector */
+#combinator > p{
+    background-color: yellow;
+}
+/* general siblings of container (same level as container)
+#combinator ~ p{
+    background-color: rgb(255, 60, 0);
+}*/
+/* adjacent siblings of container (same level as container)*/
+#combinator + p{
+    background-color: rgb(0, 255, 0);
+}
+
+#pseudo:visited{
+    color: rgb(255, 0, 255);
+}
+#pseudo:link{
+    color: rgb(0, 255, 255);
+}
+#pseudo:hover{
+    color: rgb(255, 0, 0);
+    font-size: 1.1em;
+}
+#pseudo:active{
+    color: rgb(255, 255, 0);
+    font-size: 1.1em;
+}
+
+.list:hover{
+    background-color: yellow;
+}
+.list:not(:hover){
+    background-color: gray
+}
+.list:nth-child(7){
+    background-color: rgb(33, 96, 254);
+}
+
+#greeting2 p{
+    background-color: rgb(0, 255, 255);
+    padding: 10px;
+    display: none;
+}
+#greeting2:hover p{
+    display: block;
+}
+
+#pseudo2::first-letter {
+    font-size: 2em;
+    font-style: italic;
+    color: rgb(17, 0, 255);
+}
+#pseudo3::first-line {
+    font-style: italic;
+    background-color: rgb(78, 185, 247);
+}
+#pseudo3::selection {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+/*#fruit li::before{
+    content: "✅"
+}*/
+#fruit li::marker{
+    content: "✅";
+    font-size: 2em;
+}
+#apple::after{
+    content: "🍎"
+}
+#banana::after{
+    content: "🍌"
+}
+#orange::after{
+    content: "🍊"
+}
+
+.pagination{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a{
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+    transition: background-color .3s;
+}
+
+.pagination a.active{
+    background-color: #00a2ff;
+    font-weight: bold;
+    color: rgb(206, 255, 255);
+    border-radius: 5px;
+}
+.pagination a:hover:not(.active){
+    background-color: #435374;
+    border-radius: 5px;
+}

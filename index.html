@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-1024.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Website</title>
+</head>
+
+<header style="background-color: rgb(41, 143, 245);">
+    <h1 style="font-size: 50px; text-align: center">HTML Basics</h1>
+    <a href="https://glennnoronha.vercel.app/">My Portfolio</a> 
+    <a href="https://glennnoronha.vercel.app/">About Me</a> 
+    <a href="https://glennnoronha.vercel.app/">Contact Me</a> 
+    <br>
+    <br>
+</header>
+<body>
+    <h1>Text Formatting</h1>
+    <h1>This is an h1 heading</h1>
+    <h2>This is an h2 heading</h1>
+    <h3>This is an h3 heading</h3>
+    <h4>This is an h4 heading</h4>
+    <h5>This is an h5 heading</h5>
+    <h6>This is an h6 heading</h6>
+
+    <p>This is a paragraph</p>
+    <p><b>This is a bold paragraph</b></p>
+    <p><i>This is an italic paragraph</i></p>
+    <p><em>This is a emphasized paragraph</em></p>
+    <p><strong>This is a strong paragraph</strong></p>
+    <p><small>This is a small paragraph</small></p>
+    <p><del>This is a deleted paragraph</del></p>
+    <p><ins>This is an inserted paragraph</ins></p>
+    <p>This is a <sub>subscript</sub> paragraph</p>
+    <p>This is a <sup>superscript</sup> paragraph</p>
+
+    <pre>
+            Text in a pre element
+        is displayed in a fixed-width
+        font, and it preserves
+        both      spaces and
+        line breaks
+    </pre>
+
+    <hr>
+
+    <h1>Links</h1>
+
+    <p>This is a <a href="https://glennnoronha.vercel.app/">link</a></p>
+
+    <p>Send an email to <a href="mailto:glenn@test.com">me!</a></p>
+
+    <hr>
+
+    <h1>Images</h1>
+    <a href="https://glennnoronha.vercel.app/" target="_blank" title="My Portfolio Website">
+        <img src="images/glenn.PNG" alt="picture of me" height="300px">
+    </a>
+
+    <hr>
+
+    <h1>Videos</h1>
+    <audio controls autoplay muted loop>
+        <source src="" type="audio/mp3">
+    </audio>
+
+    <hr>
+
+    <video controls>
+        <source src="images/vid.mp4" type="video/mp4">
+    </video>
+
+    <hr>
+
+    <h1>Divs and Spans</h1>
+    <div style="background-color: tomato">This is a div</div>
+    <span style="background-color:cyan">This is a span</span>
+
+    <p>This is a <div style="background-color:tomato">div</div> paragraph</p>
+    <p>This is a <span style="background-color:cyan">span</span> paragraph</p>
+    <hr>
+
+    <h1>Lists</h1>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <ul>
+        <li>Item 1</li>
+        <ul>
+            <li>Item 1.1</li>
+            <li>Item 1.2</li>
+        </ul>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <dl>
+        <dt>Item 1</dt>
+        <dd>Description 1</dd>
+        <dt>Item 2</dt>
+        <dd>Description 2</dd>
+        <dt>Item 3</dt>
+        <dd>Description 3</dd>
+    </dl>
+
+    <hr>
+
+    <table border="3">
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+        <tr>
+            <td>Cell 4</td>
+            <td>Cell 5</td>
+            <td>Cell 6</td>
+        </tr>
+
+    </table>
+
+    <hr>
+
+    <h1>Buttons</h1>
+    <a href="https://glennnoronha.vercel.app/" target="_blank">
+        <button style="font-size:20px; 
+        background-color:rgb(199, 46, 26); 
+        color:aliceblue;
+        border-radius: 25px">Click Here (linking method)</button><br><br>
+    </a>
+
+    <button onclick=myFunction() style="font-size:20px; 
+    background-color:rgb(9, 120, 216); 
+    color:aliceblue;
+    border-radius: 25px">Click Here (JS method)</button>
+
+    <p id="greeting">Hello!</p>
+    
+    <script>
+        function myFunction() {
+            document.getElementById("greeting").innerHTML = "Goodbye!";
+        }
+    </script>
+
+    <hr>
+
+    <h1>Forms</h1>
+    <form action="index.php" method="post" enctype="multipart/form-data">
+        <label for="username">username:</label>
+        <input type="text" id="username" placeholder="glenn"><br>
+
+        <label for="password">password:</label>
+	    <input type="password" id="password"><br>
+
+        <label for="email">email:</label>
+        <input type="email" id="email"><br>
+
+        <label for="number">number:</label>
+        <input type="number" id="number"><br>
+
+        <label for="bday">birthdate:</label>
+        <input type="date" id="bday"><br>
+
+        <label for="time">time:</label>
+        <input type="time" id="time"><br>
+
+        <label for="color">color:</label>
+        <input type="color" id="color"><br>
+
+        <label for="file">file:</label>
+        <input type="file" id="file" accept="image/*"><br>
+
+        <label for="range">range:</label>
+        <input type="range" id="range"><br>
+
+        <label for="payment">payment:</label>
+        <select id="payment">
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="amex">Amex</option>
+        </select><br>
+
+        <label for="checkbox">checkbox:</label>
+        <input type="checkbox" id="checkbox"><br>
+
+        <label for="radio">radio:</label>
+        <input type="radio" id="radio"><br>
+
+        <label for="textarea">textarea:</label>
+        <textarea id="textarea"></textarea><br>
+
+        
+        <input type="reset"><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <br>
+    <hr>
+
+    <h1>Colors</h1>
+    <p id="p1"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repellat omnis nam amet commodi nesciunt quia fuga error eligendi nihil eum, blanditiis consectetur hic optio aperiam officia expedita earum veniam!</p>
+    <p id="p2"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repellat omnis nam amet commodi nesciunt quia fuga error eligendi nihil eum, blanditiis consectetur hic optio aperiam officia expedita earum veniam!</p>
+    <p id="p3"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repellat omnis nam amet commodi nesciunt quia fuga error eligendi nihil eum, blanditiis consectetur hic optio aperiam officia expedita earum veniam!</p>
+    <p id="p4"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam repellat omnis nam amet commodi nesciunt quia fuga error eligendi nihil eum, blanditiis consectetur hic optio aperiam officia expedita earum veniam!</p>
+
+    <hr>
+
+    <h1>Fonts</h1>
+    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi iusto consequatur nulla perspiciatis cumque reiciendis tempora. Ipsa, totam porro ducimus fuga ratione eius architecto iste ullam hic dolorum saepe reiciendis!</h5>
+
+    <hr>
+
+    <h1>Borders</h1>
+    <p class="border">Playing with Borders</p>
+    <p class="border2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, nesciunt architecto? Eius rerum natus quas et corrupti sunt voluptatum voluptate quam dicta, assumenda magnam dolor architecto ratione obcaecati hic odio?</p>
+
+    <hr>
+
+    <h1 >Shadows</h1>
+    <h2 class="shadow">Playing with Shadows</h2>
+    <div id=box1></div>
+
+    <hr>
+
+    <h1>Margins</h1>
+    <div class="box" id="box2">Box1</div>
+    <div class="box" id="box3">Box2</div>
+
+    <hr>
+
+    <div class="float-container">
+        <h1>Floats</h1>
+        <img src="images/pokeball.png" alt="pokeball" height="150px" id="img1">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, asperiores nihil. Impedit ut praesentium esse temporibus voluptates repellat architecto ducimus! Modi saepe libero, maiores perferendis aperiam soluta numquam repellat suscipit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, asperiores nihil. Impedit ut praesentium esse temporibus voluptates repellat architecto ducimus! Modi saepe libero, maiores perferendis aperiam soluta numquam repellat suscipit.</p>
+        <img src="images/pikachu.png" alt="pikachu" height="150px" id="img2">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, asperiores nihil. Impedit ut praesentium esse temporibus voluptates repellat architecto ducimus! Modi saepe libero, maiores perferendis aperiam soluta numquam repellat suscipit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, asperiores nihil. Impedit ut praesentium esse temporibus voluptates repellat architecto ducimus! Modi saepe libero, maiores perferendis aperiam soluta numquam repellat suscipit.</p>
+    </div>
+
+    <hr>
+
+    <h1>Overflow</h1>
+    <div id="overflow">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium soluta eius aspernatur nihil ad quam facere debitis. Nihil, repellendus numquam unde eveniet aliquam, minima ut et ullam ipsam, maiores cumque.</p>
+    </div>
+
+    <hr>
+
+    <h1>Display Properties</h1>
+    <div id="div1">div</div> <!--can modify width & height-->
+    <span id="span1">span</span><!--width of text-->
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem blanditiis rem similique consequatur voluptatem corrupti cum. Commodi, officia porro pariatur suscipit quaerat nobis, exercitationem, dicta nihil minus vero sit distinctio.
+
+    <hr>
+
+    <h1>Height & Width</h1>
+    <div class="container">
+        <div class="height-width">
+            <h2>This is #1</h2>
+        </div>
+        <div class="height-width">
+            <h2>This is #2</h2>
+        </div>
+    </div>
+   
+    <hr>
+
+    <h1>Position</h1>
+
+    <div id="position">
+        <div id="position2"></div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, itaque tenetur dolores sequi cum praesentium fugit obcaecati est impedit, sit cumque inventore ea aliquam, amet porro velit sapiente quisquam consequuntur!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, itaque tenetur dolores sequi cum praesentium fugit obcaecati est impedit, sit cumque inventore ea aliquam, amet porro velit sapiente quisquam consequuntur!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, itaque tenetur dolores sequi cum praesentium fugit obcaecati est impedit, sit cumque inventore ea aliquam, amet porro velit sapiente quisquam consequuntur!</p>
+    
+    <hr>
+
+    <h1>Background Images</h1>
+    <div id="background"></div>
+
+    <hr>
+
+    <h1>Combinators</h1>
+    <div id="combinator">
+        <p>This is #1</p>
+        <p>This is #2</p>
+        <div>
+            <p>This is #3</p>
+        </div>
+    </div>
+
+    <p>This is #4</p>
+    <div>
+        <p>This is #5</p>
+    </div>
+    
+    <hr>
+
+    <h1>Pseudo Classes</h1>
+    <a id="pseudo" href="https://glennnoronha.vercel.app/" target="_blank">
+        Click Me!
+    </a>
+
+    <ul>
+        <li class="list">Item 1</li>
+        <li class="list">Item 2</li>
+        <li class="list">Item 3</li>
+        <li class="list">Item 4</li>
+        <li class="list">Item 5</li>
+        <li class="list">Item 6</li>
+        <li class="list">Item 7</li>
+        <li class="list">Item 8</li>
+        <li class="list">Item 9</li>
+        <li class="list">Item 10</li>
+    </ul>
+
+    <div id="greeting2">Hover here
+        <p>Hello</p>
+    </div>
+
+    <hr>
+
+    <h1 id="pseudo2">Pseudo Elements</h1>
+    <p id="pseudo3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates saepe aspernatur cum ipsam eos sunt adipisci. Unde nisi veritatis, totam facilis provident exercitationem praesentium iure, ratione, explicabo voluptates qui doloremque!</p>
+    <ul id="fruit">
+        <li id="apple">apple</li>
+        <li id="banana">banana</li>
+        <li id="orange">orange</li>
+    </ul>
+
+    <hr>
+
+    <h1>Pagination</h1>
+    
+    <h2>This is page 1</h2>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo dolorem maiores iusto sapiente architecto eos amet id facilis! Alias officia nulla labore eaque at commodi eius est voluptate, dolorem illum.</p>
+    <div class="pagination">
+        <a href=""><</a>
+        <a href="index.html" class="active">1</a>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html">4</a>
+        <a href="page2.html">></a>
+    </div>
+
+
+    wagwan crodie
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</script>
+    </body>
+<footer style="background-color: rgb(41, 143, 245);">
+    <p>author: Glenn Noronha</p>
+    <p>&copy; 2025 Copyright Reserved</p>
+    <a href="https://glennnoronha.vercel.app/" target="_blank">My Portfolio</a> 
+    <a href="https://glennnoronha.vercel.app/" target="_blank">About Me</a> 
+    <a href="https://glennnoronha.vercel.app/" target="_blank">Contact Me</a>
+    <br>
+    <br>
+</footer>
+</html>
