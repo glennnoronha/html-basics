@@ -2,8 +2,55 @@ body {
   background-color: lightslategray;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  font-size: 1.5em;
+  background-color: rgb(41, 143, 245);
+  width: 100vw;
+  display: flex;
+  align-items: center;     /* vertical center */
+  justify-content: center; /* horizontal center */
+  height: 100px;           /* or any height you prefer */
+  margin: 0;
+}
+
+.navbar {
+  width: 100%;
+  margin-top: -16px;
+  padding: 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+  background-color: #0059ff;
+  padding: 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  text-align: center;
+
+
+}
+
+.navbar a:hover {
+  background-color: rgb(78, 167, 255);
+  cursor: pointer;
+}
+
 h1 {
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 
@@ -73,24 +120,31 @@ h5 {
   font-size: 3em;
   width: 200px;
   height: 200px;
-  margin: auto; /* centering */
-  display: flex; /* flexbox needed for text centering */
-  justify-content: center; /* horizontal alignment */
-  align-items: center; /* vertical alignment */
+  margin: auto;
+  /* centering */
+  display: flex;
+  /* flexbox needed for text centering */
+  justify-content: center;
+  /* horizontal alignment */
+  align-items: center;
+  /* vertical alignment */
 }
 
 #box2 {
   background-color: rgb(241, 54, 54);
   margin-bottom: 10px;
 }
+
 #box3 {
   background-color: rgb(33, 96, 254);
 }
 
 .float-container {
   border: 5px solid;
-  display: flow-root; /*keeps content in container*/
+  display: flow-root;
+  /*keeps content in container*/
 }
+
 #img1 {
   float: left;
   margin-right: 10px;
@@ -104,9 +158,12 @@ h5 {
 #overflow {
   border: 2px solid;
   height: 50px;
-  overflow: visible; /*shows if there is overflow*/
-  overflow: hidden; /*hides if there is overflow*/
-  overflow: auto; /*scrolls if there is overflow*/
+  overflow: visible;
+  /*shows if there is overflow*/
+  overflow: hidden;
+  /*hides if there is overflow*/
+  overflow: auto;
+  /*scrolls if there is overflow*/
 }
 
 #div1 {
@@ -126,157 +183,242 @@ h5 {
   height: 150px;
 }
 
-.container{
-    background-color: rgb(70, 83, 96);
-    height: 50vh; /*50% of viewport height*/
-}
-.height-width {
-    background-color: white;
-    border: 2px solid;
-    padding: 0px;
-    box-sizing: border-box;
-    width: 50%;
-    float: left;
-    text-align: center;
-    min-height: 50%;
+.container {
+  background-color: rgb(70, 83, 96);
+  height: 50vh;
+  /*50% of viewport height*/
 }
 
-#position{
-    /*
+.height-width {
+  background-color: white;
+  border: 2px solid;
+  padding: 0px;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  text-align: center;
+  min-height: 50%;
+}
+
+#position {
+  /*
     relative = relative to where it is in the document
     fixed = relative to the viewport
     absolute = relative to the nearest ancestor
     sticky = based on scroll position
     static = default postion for an element*/
-    width: 200px;
-    height: 200px;
-    background-color: rgb(0, 110, 255);
-    position: relative;
-    left: 50vw; /* left edge at 50% of viewport width*/
-    transform: translateX(-50%); /*50% of width()*/;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(0, 110, 255);
+  position: relative;
+  left: 50vw;
+  /* left edge at 50% of viewport width*/
+  transform: translateX(-50%);
+  /*50% of width()*/
+  ;
 }
 
-#position2{
-    width: 100px;
-    height: 100px;
-    background-color: rgb(255, 75, 58);
-    position: absolute;
-    top: 50px;
-    left: 50px
+#position2 {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 75, 58);
+  position: absolute;
+  top: 50px;
+  left: 50px
 }
 
-#background{
-    background-image: url(images/wallpaper.webp);
-    height: 100vh;
-    width: 100vw;
-    background-size: cover;
-    background-position: center;
-    /*background-attachment: fixed;*/
+#background {
+  background-image: url(images/wallpaper.webp);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  /*background-attachment: fixed;*/
 }
 
-#combinator{
-    border: 2px solid;
+#combinator {
+  border: 2px solid;
 }
+
 /*
 #combinator p{
     background-color: rgb(255, 0, 0);
 } descendant selector */
-#combinator > p{
-    background-color: yellow;
+#combinator>p {
+  background-color: yellow;
 }
+
 /* general siblings of container (same level as container)
 #combinator ~ p{
     background-color: rgb(255, 60, 0);
 }*/
 /* adjacent siblings of container (same level as container)*/
-#combinator + p{
-    background-color: rgb(0, 255, 0);
+#combinator+p {
+  background-color: rgb(0, 255, 0);
 }
 
-#pseudo:visited{
-    color: rgb(255, 0, 255);
-}
-#pseudo:link{
-    color: rgb(0, 255, 255);
-}
-#pseudo:hover{
-    color: rgb(255, 0, 0);
-    font-size: 1.1em;
-}
-#pseudo:active{
-    color: rgb(255, 255, 0);
-    font-size: 1.1em;
+#pseudo:visited {
+  color: rgb(255, 0, 255);
 }
 
-.list:hover{
-    background-color: yellow;
-}
-.list:not(:hover){
-    background-color: gray
-}
-.list:nth-child(7){
-    background-color: rgb(33, 96, 254);
+#pseudo:link {
+  color: rgb(0, 255, 255);
 }
 
-#greeting2 p{
-    background-color: rgb(0, 255, 255);
-    padding: 10px;
-    display: none;
+#pseudo:hover {
+  color: rgb(255, 0, 0);
+  font-size: 1.1em;
 }
-#greeting2:hover p{
-    display: block;
+
+#pseudo:active {
+  color: rgb(255, 255, 0);
+  font-size: 1.1em;
+}
+
+.list:hover {
+  background-color: yellow;
+}
+
+.list:not(:hover) {
+  background-color: gray
+}
+
+.list:nth-child(7) {
+  background-color: rgb(33, 96, 254);
+}
+
+#greeting2 p {
+  background-color: rgb(0, 255, 255);
+  padding: 10px;
+  display: none;
+}
+
+#greeting2:hover p {
+  display: block;
 }
 
 #pseudo2::first-letter {
-    font-size: 2em;
-    font-style: italic;
-    color: rgb(17, 0, 255);
+  font-size: 2em;
+  font-style: italic;
+  color: rgb(17, 0, 255);
 }
+
 #pseudo3::first-line {
-    font-style: italic;
-    background-color: rgb(78, 185, 247);
+  font-style: italic;
+  background-color: rgb(78, 185, 247);
 }
+
 #pseudo3::selection {
-    background-color: rgb(255, 0, 0);
-    color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
 }
+
 /*#fruit li::before{
     content: "✅"
 }*/
-#fruit li::marker{
-    content: "✅";
-    font-size: 2em;
-}
-#apple::after{
-    content: "🍎"
-}
-#banana::after{
-    content: "🍌"
-}
-#orange::after{
-    content: "🍊"
+#fruit li::marker {
+  content: "✅";
+  font-size: 2em;
 }
 
-.pagination{
+#apple::after {
+  content: "🍎"
+}
+
+#banana::after {
+  content: "🍌"
+}
+
+#orange::after {
+  content: "🍊"
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  color: black;
+  text-decoration: none;
+  padding: 8px 15px;
+  display: inline-block;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+  background-color: #00a2ff;
+  font-weight: bold;
+  color: rgb(206, 255, 255);
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #435374;
+  border-radius: 5px;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown button {
+  font-size: 1.2em;
+  background-color: #0084ff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.dropdown .content {
+  position: absolute;
+  background-color: #00a2ff;
+  min-width: 107px;
+  box-shadow: 2px 2px 5px #000000;
+  display: none;
+}
+
+.dropdown:hover .content {
+  display: block;
+}
+
+.dropdown:hover button {
+  background-color: #00a2ff;
+}
+
+.dropdown a:hover {
+  background-color: #0a689e;
+}
+
+@media screen and (max-width: 600px) {
+  header h1 {
     text-align: center;
-    margin-top: 20px;
-}
 
-.pagination a{
-    color: black;
-    text-decoration: none;
-    padding: 8px 15px;
-    display: inline-block;
-    transition: background-color .3s;
-}
+  }
 
-.pagination a.active{
-    background-color: #00a2ff;
-    font-weight: bold;
-    color: rgb(206, 255, 255);
-    border-radius: 5px;
-}
-.pagination a:hover:not(.active){
-    background-color: #435374;
-    border-radius: 5px;
+  .navbar ul {
+    flex-direction: column; /* stack nav links vertically */
+    
+  }
+
+  .navbar a {
+    padding: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  body {
+    padding: 10px;
+    width: 100%;
+  }
 }
