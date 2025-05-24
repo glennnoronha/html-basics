@@ -4,7 +4,7 @@ A beginner-friendly, multi-page HTML and CSS project demonstrating core web deve
 
 ## 🌐 Live Demo
 
-> Coming soon (you can deploy using GitHub Pages, Vercel, or Netlify)
+[Check it out here!](https://glennnoronha.github.io/html-basics/)
 
 ## 📁 Project Structure
 
