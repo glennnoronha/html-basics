@@ -28,13 +28,6 @@ A beginner-friendly, multi-page HTML and CSS project demonstrating core web deve
 - HTML5
 - CSS3
 
-## 📸 Screenshots
-
-*(Add screenshots here)*  
-Example:
-
-![Homepage Preview](images/pikachu.png)
-
 ## 📦 How to Run Locally
 
 1. Download or clone this repository.
