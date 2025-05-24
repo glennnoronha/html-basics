@@ -2,20 +2,28 @@ body {
   background-color: lightslategray;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 
+body *:not(header):not(.navbar):not(.navbar ul) {
+  margin-left: 5px;
+}
+
 header {
   font-size: 1.5em;
   background-color: rgb(41, 143, 245);
-  width: 100vw;
+  width: 100%;
   display: flex;
-  align-items: center;     /* vertical center */
-  justify-content: center; /* horizontal center */
-  height: 100px;           /* or any height you prefer */
+  align-items: center;
+  /* vertical center */
+  justify-content: center;
+  /* horizontal center */
+  height: 100px;
+  /* or any height you prefer */
   margin: 0;
 }
 
@@ -44,7 +52,7 @@ header {
 
 }
 
-.navbar a:hover {
+.navbar li:hover {
   background-color: rgb(78, 167, 255);
   cursor: pointer;
 }
@@ -115,12 +123,24 @@ h5 {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
 }
 
+.box-container {
+  display: flex;
+  flex-direction: column;
+  /* stack vertically */
+  align-items: center;
+  /* center horizontally */
+  justify-content: center;
+  height: 50vh;
+  /* take full viewport height */
+  gap: 20px;
+  /* spacing between boxes */
+}
+
 .box {
   border: 5px solid;
   font-size: 3em;
   width: 200px;
   height: 200px;
-  margin: auto;
   /* centering */
   display: flex;
   /* flexbox needed for text centering */
@@ -128,6 +148,7 @@ h5 {
   /* horizontal alignment */
   align-items: center;
   /* vertical alignment */
+
 }
 
 #box2 {
@@ -230,7 +251,7 @@ h5 {
 #background {
   background-image: url(images/wallpaper.webp);
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-size: cover;
   background-position: center;
   /*background-attachment: fixed;*/
@@ -397,19 +418,165 @@ h5 {
   background-color: #0a689e;
 }
 
+.icons {
+  text-align: center;
+}
+.icons a {
+  text-decoration: none;
+  margin-right: 10px;
+}
+.fa-brands.fa-linkedin.fa-5x {
+  color: hsl(201, 100%, 35%)
+}
+.fa-brands.fa-linkedin.fa-5x:hover {
+  color: hsl(201, 100%, 40%)
+}
+.fa-brands.fa-github.fa-5x {
+  color: hsl(0, 0%, 0%)
+}
+.fa-brands.fa-github.fa-5x:hover {
+  color: hsl(0, 0%, 20%)
+}
+.fa-brands.fa-x-twitter.fa-5x {
+  color: hsl(0, 0%, 0%)
+}
+.fa-brands.fa-x-twitter.fa-5x:hover {
+  color: hsl(0, 0%, 20%)
+}
+
+.icons2 {
+  text-align: left;
+  margin-top: 15px;
+}
+.icons2 a {
+  text-decoration: none;
+}
+.fa-brands.fa-linkedin.fa-2x {
+  color: hsl(201, 100%, 35%)
+}
+.fa-brands.fa-linkedin.fa-2x:hover {
+  color: hsl(201, 100%, 29%)
+}
+.fa-brands.fa-github.fa-2x {
+  color: hsl(0, 0%, 0%)
+}
+.fa-brands.fa-github.fa-2x:hover {
+  color: hsl(0, 0%, 20%)
+}
+.fa-brands.fa-x-twitter.fa-2x {
+  color: hsl(0, 0%, 0%)
+}
+.fa-brands.fa-x-twitter.fa-2x:hover {
+  color: hsl(0, 0%, 20%)
+}
+
+.flex-container {
+  display: flex;
+  border: 5px solid black;
+  height: 90vh;
+  /*flex-direction: row; row-reverse, flips the elements*/
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;  /*if not enough space, it will wrap */
+  align-content: space-evenly;
+}
+.flex-box {
+  width: 150px;
+  height: 150px;
+  font-size: 8em;
+  text-align: center;
+  border-radius: 15px;
+}
+
+#flex-box1 {
+  background-color: hsl(0, 100%, 70%)
+}
+#flex-box2 {
+  background-color: hsl(60, 100%, 70%)
+}
+#flex-box3 {
+  background-color: hsl(111, 100%, 70%)
+}
+#flex-box4 {
+  background-color: hsl(200, 100%, 70%)
+}
+
+.tbox {
+  width: 150px;
+  height: 150px;
+  font-size: 8em;
+  border: 5px solid black;
+  text-align: center;
+  border-radius: 15px;
+  /* to do multiple transformations, use one transform */
+  transform: translateX(100px) translateY(20px) rotateZ(45deg) scale(0.80) skew(15deg, 15deg);
+}
+#tbox1 {
+  background-color: hsl(0, 100%, 70%);
+}
+#tbox2 {
+  background-color: hsl(226, 100%, 70%);
+}
+#tbox3 {
+  background-color: hsl(295, 100%, 70%);
+}
+
+#ball {
+  font-size: 5em;
+  width: 100px;
+  height: 100px;
+  background-color: crimson;
+  border-radius: 20%;
+  text-align: center;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  animation: bounce 2s infinite ease-in-out;
+  margin: 100px;
+}
+
+video {
+  height: 200px;
+  width: 400px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+}
+
 @media screen and (max-width: 600px) {
   header h1 {
     text-align: center;
-
   }
 
   .navbar ul {
-    flex-direction: column; /* stack nav links vertically */
-    
+    display: flex;
+    /* ✅ make it a flex container */
+    flex-direction: column;
+    /* ✅ stack nav items vertically */
+    align-items: center;
+    /* ✅ center them horizontally */
+    justify-content: center;
+    /* optional: vertical spacing */
+    padding: 0;
+    margin: 0 auto;
+    /* ✅ center the <ul> itself */
+    /* ✅ shrink to fit content */
+  }
+
+  .navbar li {
+    width: 100%;
   }
 
   .navbar a {
-    padding: 10px;
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
   }
 
   img {
@@ -418,7 +585,11 @@ h5 {
   }
 
   body {
-    padding: 10px;
-    width: 100%;
+    padding: 0;
+    width: 100;
+  }
+
+  body *:not(header):not(.navbar):not(.navbar ul) {
+    margin-left: 5px;
   }
 }

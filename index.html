@@ -8,6 +8,7 @@
         href="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-1024.png">
     <link rel="stylesheet" href="styles.css">
     <title>My Website</title>
+    <script src="https://kit.fontawesome.com/2f516528df.js" crossorigin="anonymous"></script>
 </head>
 
 
@@ -23,8 +24,7 @@
             <li><a href="page3.html">Contact</a></li>
         </ul>
     </nav>
-    <h1>Text Formatting</h1>
-    <h1>This is an h1 heading</h1>
+    <h1>Text Formatting (h1 heading)</h1>
     <h2>This is an h2 heading</h1>
         <h3>This is an h3 heading</h3>
         <h4>This is an h4 heading</h4>
@@ -54,9 +54,9 @@
 
         <h1>Links</h1>
 
-        <p>This is a <a href="https://glennnoronha.vercel.app/">link</a></p>
+        <p>This is a<a href="https://glennnoronha.vercel.app/">link</a></p>
 
-        <p>Send an email to <a href="mailto:glenn@test.com">me!</a></p>
+        <p>Send an email to<a href="mailto:glenn@test.com">me!</a></p>
 
         <hr>
 
@@ -74,8 +74,8 @@
 
         <hr>
 
-        <video controls>
-            <source src="images/vid.mp4" type="video/mp4">
+        <video controls autoplay muted loop>
+            <source src="videos/swing.mp4" type="video/mp4">
         </video>
 
         <hr>
@@ -250,8 +250,10 @@
         <hr>
 
         <h1>Margins</h1>
-        <div class="box" id="box2">Box1</div>
-        <div class="box" id="box3">Box2</div>
+        <div class="box-container">
+            <div class="box" id="box2">Box1</div>
+            <div class="box" id="box3">Box2</div>
+        </div>
 
         <hr>
 
@@ -391,13 +393,12 @@
             amet id facilis! Alias officia nulla labore eaque at commodi eius est voluptate, dolorem illum.</p>
 
         <div class="pagination">
-            <a href="">
-                <</a>
-                    <a href="index.html" class="active">1</a>
-                    <a href="page2.html">2</a>
-                    <a href="page3.html">3</a>
-                    <a href="page4.html">4</a>
-                    <a href="page2.html">></a>
+            <a href=""><</a>
+            <a href="index.html" class="active">1</a>
+            <a href="page2.html">2</a>
+            <a href="page3.html">3</a>
+            <a href="page4.html">4</a>
+            <a href="page2.html">></a>
         </div>
 
         <h1>Dropdown Menus</h1>
@@ -410,21 +411,71 @@
             </div>
         </div>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nisi fuga cumque exercitationem, labore
+        <p>Lorem ipsum dolor sit amet cons'ectetur adipisicing elit. Obcaecati nisi fuga cumque exercitationem, labore
             doloremque sed, veniam quos nostrum possimus maiores nesciunt, reiciendis ad deserunt debitis delectus
             voluptas optio porro.</p>
 
-        wagwan crodie
+        <hr>
+        <h1>Icons</h1>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/glenn-noronha-314177161/" target="_blank">
+                <i class="fa-brands fa-linkedin fa-5x"></i>
+            </a>
+            <a href="https://github.com/GlennNoronha" target="_blank">
+                <i class="fa-brands fa-github fa-5x"></i>
+            </a>
+            <a href="https://x.com/glenn_noronha" target="_blank">
+                <i class="fa-brands fa-x-twitter fa-5x"></i>
+            </a>
+        </div>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        </script>
+        <hr>
+        <h1>Flexbox</h1>
+
+        <div class="flex-container">
+            <div class="flex-box" id="flex-box1">1</div>
+            <div class="flex-box" id="flex-box2">2</div>
+            <div class="flex-box" id="flex-box3">3</div>
+            <div class="flex-box" id="flex-box4">4</div>
+            <div class="flex-box" id="flex-box1">1</div>
+            <div class="flex-box" id="flex-box2">2</div>
+            <div class="flex-box" id="flex-box3">3</div>
+            <div class="flex-box" id="flex-box4">4</div>
+        </div>
+
+        <hr>
+        <h1>Transformations</h1>
+
+        <div class="tbox" id="tbox1">Hi</div>
+        <div class="tbox" id="tbox2">Hi</div>
+        <div class="tbox" id="tbox3">Hi</div>
+
+        <br><br><br><br>
+
+        <hr>
+        <h1>Animations</h1>
+
+        <div id="ball">Hi</div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
         <footer style="background-color: rgb(41, 143, 245);">
-            <p>Author: Glenn Noronha</p>
+            <p style="padding-top: 10px;">Author: Glenn Noronha</p>
             <p>&copy; 2025 Copyright Reserved</p>
             <a href="https://glennnoronha.vercel.app/" target="_blank">My Portfolio</a>
             <a href="https://glennnoronha.vercel.app/" target="_blank">About Me</a>
             <a href="https://glennnoronha.vercel.app/" target="_blank">Contact Me</a>
+            <div class="icons2">
+                <a href="https://www.linkedin.com/in/glenn-noronha-314177161/" target="_blank">
+                    <i class="fa-brands fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/GlennNoronha" target="_blank">
+                    <i class="fa-brands fa-github fa-2x"></i>
+                </a>
+                <a href="https://x.com/glenn_noronha" target="_blank">
+                    <i class="fa-brands fa-x-twitter fa-2x"></i>
+                </a>
+            </div>
             <br>
             <br>
         </footer>
